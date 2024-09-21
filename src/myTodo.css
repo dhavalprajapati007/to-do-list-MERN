@@ -1,0 +1,115 @@
+/* MyToDo.css */
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.todo-card {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    /* Set a fixed width */
+}
+
+.todo-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.todo-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: #555;
+    color: #fff;
+}
+
+.todo-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}
+
+.todo-button:hover {
+    background-color: #218838;
+}
+
+.todo-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    background-color: #555;
+    margin-bottom: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+/* Adjust checkbox alignment and size */
+.todo-checkbox {
+    margin-top: 15px;
+    width: 18px;
+    /* Adjust the size as needed */
+    height: 18px;
+    /* Adjust the size as needed */
+    vertical-align: middle;
+    appearance: none;
+    /* Remove default browser styles */
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #444;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Add a green check when checked */
+.todo-checkbox:checked {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.todo-checkbox:checked::after {
+    content: '✔';
+    /* Unicode for checkmark */
+    font-size: 14px;
+    color: white;
+    position: absolute;
+    left: 3px;
+    /* Adjust for perfect centering */
+    top: -2px;
+}
+
+
+.todo-title {
+    flex: 1;
+}
+
+.todo-title.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.todo-delete {
+    background: none;
+    border: none;
+    color: #ff4d4d;
+    cursor: pointer;
+}
+
+.todo-delete:hover {
+    color: #ff1a1a;
+}

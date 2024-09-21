@@ -1,0 +1,78 @@
+body {
+    background-color: #121212;
+    /* Dark background */
+    color: #ffffff;
+    /* White text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Full viewport height */
+    margin: 0;
+}
+
+.card {
+    background-color: #1e1e1e;
+    /* Card background */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    /* Shadow effect */
+    padding: 30px;
+    /* Increased padding for the card */
+    width: 300px;
+    /* Fixed width */
+}
+
+h2 {
+    text-align: center;
+    /* Center heading */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    /* Column-wise layout */
+}
+
+input {
+    margin-bottom: 20px;
+    /* Increased space between inputs */
+    padding: 10px;
+    /* Padding inside inputs */
+    border: none;
+    /* No border */
+    border-radius: 5px;
+    /* Rounded corners for inputs */
+}
+
+button {
+    padding: 10px;
+    /* Padding for buttons */
+    border: none;
+    /* No border */
+    border-radius: 5px;
+    /* Rounded corners for buttons */
+    background-color: #6200ea;
+    /* Button background color */
+    color: #ffffff;
+    /* White text for buttons */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #3700b3;
+    /* Darker shade on hover */
+}
+
+.swal-custom-popup {
+    background-color: #333 !important;
+    /* Background color */
+    color: white !important;
+    /* Text color */
+    border-radius: 8px !important;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+    /* Shadow effect */
+}

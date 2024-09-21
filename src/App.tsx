@@ -1,26 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import { AuthProvider } from './context/AuthContext';
+import { TodoProvider } from './context/TodoContext';
+import ProtectedRoute from './routes/ProtectedRoute';
+import MyToDo from './pages/MyToDo';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <AuthProvider>
+        <TodoProvider>
+          <Routes>
+            {/* Redirect root path to login */}
+            <Route path="/" element={<Navigate to="/login" />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/login" element={<Login />} />
+            {/* Protected route for My To-Do */}
+            <Route element={<ProtectedRoute />}>
+              <Route path="/my-to-do" element={<MyToDo />} />
+            </Route>
+
+          </Routes>
+        </TodoProvider>
+      </AuthProvider>
+    </Router>
   );
-}
+};
 
 export default App;
